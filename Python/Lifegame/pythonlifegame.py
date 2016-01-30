@@ -88,7 +88,7 @@ def count(x, y):
 def run():
     if is_run:
         next()
-    root.after(500, run)
+    root.after(100, run)
     
 def start_stop():
     global is_run
@@ -112,8 +112,8 @@ def alive_dead(event):
     draw()
 
 space = 5
-cell = 16
-color = {alive: "green", dead: "black"}
+cell = 12
+color = {alive: "blue", dead: "white"}
 is_run = False
 
 root = Tk()
