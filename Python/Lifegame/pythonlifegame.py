@@ -77,6 +77,32 @@ def count(x, y):
 #def start_stop():
 #def alive_dead(event):
 
+space = 5
+cell = 16
+color = {alive: "green", dead: "black"}
+is_run = False
+
+root = Tk()
+canvas_h = space * 2 + height * cell
+canvas_w = space * 2 + width * cell
+canvas = Canvas(root, width = canvas_w, height = canvas_h)
+canvas.bind("<Button-1>", alive_dead)
+canvas.pack()
+
+reset_button = Button(root, text = "reset", command = reset)
+reset_button.pack(side = "left")
+
+rand_button = Button(root, text = "rand", command = rand_set)
+rand_button.pack(side = "left")
+
+run_button = Button(run, text = "run", command = start_stop)
+run_button.pack(side = "left")
+
+exit_button = Button(root, text = "exit", command = root.destroy)
+exit_button.pack(side = "right")
+
+
+
 init()
-#run()
+run()
 root.mainloop()
