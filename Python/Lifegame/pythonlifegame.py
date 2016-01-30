@@ -72,10 +72,44 @@ def count(x, y):
         if y! = 0:
             num = num + field[y - 1][x - 1]
         if y! = height -1:
-            num = num + field[y + 1][x + !] 
-#def run():
-#def start_stop():
-#def alive_dead(event):
+            num = num + field[y + 1][x + 1]
+    if x! = width - 1:
+        num = num + field[y][x + 1]
+        if y! = 0:
+            num = num + field[y - 1][x + 1]
+        if y! = height - 1:
+            num = num + field[y + 1][x + 1]
+    if y! = 0:
+        num = num + field[y - 1][x]
+    if y! = height - 1:
+        num = num + field[y + 1][x]
+    return num
+
+def run():
+    if is_run:
+        next()
+    root.after(500, run)
+    
+def start_stop():
+    global is_run
+    is_run = not is_run
+    
+def alive_dead(event):
+    if is_run:
+        return
+    if event.x <space of event.x> (space + cell * width):
+        return
+    if event.y <space or event.y> (space + cell * width):
+        return
+    
+    x = int((event.x - space) / cell)
+    y = int((event.y - space) / cell)
+
+    if field[y][x] == alive:
+        field[y][x] = dead
+    elif field[y][x] == dead:
+        field[y][x] = alive
+    draw()
 
 space = 5
 cell = 16
