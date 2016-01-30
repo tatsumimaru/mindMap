@@ -26,6 +26,12 @@ def draw():
     canvas.delete("field")
     for i in range(height):
         for j in range(width):
+            x0 = space + j * cell
+            y0 = space + i * cell
+            x1 = x0 + cell
+            y1 = y0 + cell
+            canvas.create_rectangle (x0, y0, x1, y1, fill = color [field[i][j]], tags = "field")
+            
 
 #def next():
 #def count(x, y):
