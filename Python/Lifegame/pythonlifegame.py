@@ -46,7 +46,7 @@ def draw():
             y0 = space + i * cell
             x1 = x0 + cell
             y1 = y0 + cell
-            canvas.create_rectangle (x0, y0, x1, y1, fill = color [field[i][j]], tags = "field")
+            canvas.create_rectangle(x0, y0, x1, y1, fill = color[field[i][j]], tags = "field")
 
 def next():
     global field
@@ -72,14 +72,16 @@ def count(x, y):
         num = num + field[y][x - 1]
         if y != 0:
             num = num + field[y - 1][x - 1]
-        if y != height -1:
-            num = num + field[y + 1][x + 1]
+        if y != height - 1:
+            num = num + field[y + 1][x - 1]
+
     if x != width - 1:
         num = num + field[y][x + 1]
         if y != 0:
             num = num + field[y - 1][x + 1]
         if y != height - 1:
             num = num + field[y + 1][x + 1]
+
     if y != 0:
         num = num + field[y - 1][x]
     if y != height - 1:
