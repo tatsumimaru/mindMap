@@ -67,21 +67,21 @@ def next():
 def count(x, y):
     num = 0
     
-    if x! = 0:
+    if x != 0:
         num = num + field[y][x - 1]
-        if y! = 0:
+        if y != 0:
             num = num + field[y - 1][x - 1]
-        if y! = height -1:
+        if y != height -1:
             num = num + field[y + 1][x + 1]
-    if x! = width - 1:
+    if x != width - 1:
         num = num + field[y][x + 1]
-        if y! = 0:
+        if y != 0:
             num = num + field[y - 1][x + 1]
-        if y! = height - 1:
+        if y != height - 1:
             num = num + field[y + 1][x + 1]
-    if y! = 0:
+    if y != 0:
         num = num + field[y - 1][x]
-    if y! = height - 1:
+    if y != height - 1:
         num = num + field[y + 1][x]
     return num
 
@@ -97,7 +97,7 @@ def start_stop():
 def alive_dead(event):
     if is_run:
         return
-    if event.x <space of event.x> (space + cell * width):
+    if event.x <space or event.x> (space + cell * width):
         return
     if event.y <space or event.y> (space + cell * width):
         return
