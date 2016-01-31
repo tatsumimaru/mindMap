@@ -8,9 +8,11 @@ dead = 0
 alive = 1
 status = (dead, alive)
 
-height = 10 
-width = 10
+height = 50 
+width = 50
 field = []
+
+#random.seed(0)
 
 def init():
     for i in range(height):
@@ -45,7 +47,6 @@ def draw():
             x1 = x0 + cell
             y1 = y0 + cell
             canvas.create_rectangle (x0, y0, x1, y1, fill = color [field[i][j]], tags = "field")
-            
 
 def next():
     global field
@@ -126,10 +127,10 @@ canvas.pack()
 reset_button = Button(root, text = "reset", command = reset)
 reset_button.pack(side = "left")
 
-rand_button = Button(root, text = "rand", command = rand_set)
+rand_button = Button(root, text = "random", command = rand_set)
 rand_button.pack(side = "left")
 
-run_button = Button(root, text = "run", command = start_stop)
+run_button = Button(root, text = "start/stop", command = start_stop)
 run_button.pack(side = "left")
 
 exit_button = Button(root, text = "exit", command = root.destroy)
