@@ -8,7 +8,7 @@ dead = 0
 alive = 1
 status = (dead, alive)
 
-height = 10
+height = 10 
 width = 10
 field = []
 
@@ -112,7 +112,7 @@ def alive_dead(event):
     draw()
 
 space = 5
-cell = 12
+cell = 10
 color = {alive: "blue", dead: "white"}
 is_run = False
 
@@ -129,7 +129,7 @@ reset_button.pack(side = "left")
 rand_button = Button(root, text = "rand", command = rand_set)
 rand_button.pack(side = "left")
 
-run_button = Button(run, text = "run", command = start_stop)
+run_button = Button(root, text = "run", command = start_stop)
 run_button.pack(side = "left")
 
 exit_button = Button(root, text = "exit", command = root.destroy)
