@@ -12,7 +12,7 @@ height = 50
 width = 50
 field = []
 
-random.seed(0)
+#random.seed(0)
 
 def init():
     for i in range(height):
