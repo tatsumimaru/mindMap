@@ -10,7 +10,7 @@ INITIAL_PROMPT = 'May I have your name?'
 
 class Responses:
     def response_stock(parts):
-        return random.choice(["How do you feel about that?", "Then what's your favorite?", "Tell me your feeling", "So, what are you working at this day?"])
+        return random.choice(["How do you feel about that?", "Then what's your favorite?", "Tell me your feeling", "So, what are you working at this day?", "So, what's in your mind?"])
 
     def response_noun1(parts):
         responses = ["Why do you like %s?", "What do you like most about %s?", "Tell me more about %s?"]
@@ -20,14 +20,14 @@ class Responses:
     def response_noun2(parts):
         if 'NN' in parts:
             noun = random.choice(parts['NN'])
-            return "%s, %s, %s! Can you talk about something else please!" % (noun, noun.title(), noun.upper())
+            return "Well well. %s, %s, %s.. What else do you have in your mind?" % (noun, noun.title(), noun.upper())
 
 
-    def response_noun3(parts):
+    def response_noun1(parts):
         if 'VB' in parts:
             verb = random.choice(parts['VB'])
             day = random.choice('Mondays Wednesdays Toast Acid'.split())
-            return "Wow, I love to %s too, especially on %s. When do you like to %S?" % (verb, day , verb)
+            return "Wow, I love to %s too, especially on %s. When do you like to %s?" % (verb, day, verb)
 
 output = INITIAL_PROMPT
 while True:
