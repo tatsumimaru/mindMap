@@ -16,4 +16,7 @@ Python2.7 and nltk().
 ##What's next
 BOTH FILES ARE UNDER CONSTRUCTION.
 
+##Environment
+Ubuntu15.04
+
 ##Aknowledgement
