@@ -13,5 +13,7 @@ This file is for Japanese texts.
 ##Tools
 Python2.7 and nltk().
 
+##What's next
+BOTH FILES ARE UNDER CONSTRUCTION.
 
 ##Aknowledgement
