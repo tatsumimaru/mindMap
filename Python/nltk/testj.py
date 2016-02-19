@@ -1,5 +1,5 @@
 #/!/usr/bin/python
-# -*- coding: UTF-8 -*-
+# -*- coding: utf-8 -*-
 #This script is available in Python2.x
 #(cf. 12.1.1 of this page http://www.nltk.org/book-jp/ch12.html#id53)
 
